@@ -5,16 +5,16 @@
  */
 package programacionfuncional;
 
-import interfaces.ISaludar;
+import interfaces.IOperaciones;
 
 /**
  *
  * @author emarin
  */
-public class PruebaLambda {
-
+public class PruebaOperaciones {
     public static void main(String[] args) {
-        ISaludar saluda = (usuario) -> { System.out.println("Hola " + usuario);};
-        saluda.saludar("Ernesto");
+        IOperaciones suma = (val1,val2) -> val1 + val2;
+        int resultado = suma.sumar(5, 3);
+        System.out.println("resultado: " + resultado);
     }
 }
